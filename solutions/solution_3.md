@@ -15,7 +15,7 @@ lets convert the above bytecode into opcode
 [06]            STOP
 ```
 
-let hope into the opcode of above
+let hop into the opcode of above
 
 **CALLDATASIZE**: push the byte size of the calldata into the top of the stack 
 
