@@ -28,16 +28,24 @@ let's decode above bytecode into the opcode
 let hop into the above opcode
 
 **CALLDATASIZE**: It get the size of input data that is pass as the calldata.
+
 **PUSH1**: push 1 byte size into the stack
+
 **DUP1**: duplicate the 1 byte size value present on the top of stack and again push the same value into the stack
+
 **CALLDATACOPY**: It copy the input data into the memory. 
        - destOffset: byte offset in the memory where the result will be copied.
        - offset: byte offset in the calldata to copy.
        - size: byte size to copy
+
 **CREATE**: Create a new account with associated code. look **CREATE** instruction at [evm.codes](https://www.evm.codes/?fork=shanghai)
+
 **EQ**: compare the 2 top value presented in the stack, lets called it a: left side integer and b as right side integer 
+
 if **a==b**: 1 if the left side is equal to the right side, 0 otherwise.
+
 **JUMPI**: it takes the byte offset in the deployed code where execution will continue from. Must be a JUMPDEST instruction and the program counter will be altered with the new value only if this value is different from 0. Otherwise, the program counter is simply incremented and the next instruction will be executed.
+
 **EXTCODESIZE**: it takes 20-bytes address of the contract to query and return the byte size of the code.
 
 Now let solve the puzzle_7:
